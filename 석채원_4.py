@@ -20,22 +20,22 @@ class Shape(CPoint):
 
 class Circle(Shape):
     def __init__(self, color, filled, radius):
-        super().__init__(color,filled)
+        super().__init__(color,filled) # x,y 초기화됨
         self.radius = radius
     def area(self):
         return self.radius**2*3.14   
     def __str__(self):
-        return super().__str__() + f'(radius = {self.radius})'
+        return super().__str__() + f'(radius = {self.radius})'  # super().__str__() 통해 x,y 좌표 출력
        
 class Rectangle(Shape):
     def __init__(self, color, filled, width, height):
-        super().__init__(color, filled)
+        super().__init__(color, filled)  # x,y 초기화됨
         self.width = width
         self.height = height
     def area(self):
         return self.width*self.height
     def __str__(self):
-        return super().__str__() + f'({self.width},{self.height})'
+        return super().__str__() + f'({self.width},{self.height})' # super().__str__() 통해 x,y 좌표 출력
 
 def main() :
     a = Shape()
